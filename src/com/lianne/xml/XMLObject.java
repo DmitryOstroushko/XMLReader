@@ -1,2 +1,27 @@
-package com.lianne.xml;public class XMLObject {
+package com.lianne.xml;
+
+public class XMLObject {
+
+    private String id;
+
+    public XMLObject() {
+        id = "";
+    }
+
+    public XMLObject(String id) {
+        setId(id);
+    }
+
+    public void clear() {
+        id = "";
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public String getId() {
+        return id;
+    }
+
 }
