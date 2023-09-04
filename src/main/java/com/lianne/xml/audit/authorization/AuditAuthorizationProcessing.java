@@ -1,4 +1,4 @@
-package com.lianne.xml.audit.authorization;
+package main.java.com.lianne.xml.audit.authorization;
 
 import org.xml.sax.*;
 

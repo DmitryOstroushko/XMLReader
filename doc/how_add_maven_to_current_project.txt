@@ -1,4 +1,4 @@
-
+How add MAVEN to the project
 
 Папка src - права кнопка мыши, отметить "Mark directory as" - "Sources root" (по умолчанию так и отмечено)
 Папка test - права кнопка мыши, отметить "Mark directory as" - "Test sources root"
@@ -13,4 +13,4 @@
 3. Все файлы и подпапки в test необходимо руками (если этого не сделала IDEA) перенести
 в src/main/test
 
-4.
+4. Видео https://www.youtube.com/watch?v=UQYKIyk1wi8

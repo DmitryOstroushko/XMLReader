@@ -1,4 +1,4 @@
-package com.lianne.xml;
+package main.java.com.lianne.xml;
 
 
 public class XMLObject {
