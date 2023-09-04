@@ -1,10 +1,10 @@
-package main.java.com.lianne.xml.audit.authorization;
+package com.lianne.xml.audit.authorization;
 
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
 
-import main.java.com.lianne.properties.XMLAuthorizationAuditProperties;
+import com.lianne.properties.XMLAuthorizationAuditProperties;
 import org.xml.sax.Attributes;
 import org.xml.sax.SAXException;
 import org.xml.sax.helpers.DefaultHandler;

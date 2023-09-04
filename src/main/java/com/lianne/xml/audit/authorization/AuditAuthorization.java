@@ -1,6 +1,6 @@
-package main.java.com.lianne.xml.audit.authorization;
+package com.lianne.xml.audit.authorization;
 
-import main.java.com.lianne.xml.XMLObject;
+import com.lianne.xml.XMLObject;
 
 import java.text.SimpleDateFormat;
 import java.text.ParseException;

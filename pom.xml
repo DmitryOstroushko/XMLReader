@@ -4,8 +4,8 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>lianne.XMLParser</groupId>
-    <artifactId>elementary</artifactId>
+    <groupId>lianne</groupId>
+    <artifactId>XMLParser</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>jar</packaging>
 
@@ -18,39 +18,12 @@
     <!-- здесь будут библиотеки для проекта, которые ранее могли быть сложены в каталог lib (рядом с src) -->
     <!-- после добавления библиотек как dependency, нет необходиммости хранить библиотке в папке lib -->
     <dependencies>
-    <dependency>
-        <groupId>org.projectlombok</groupId>
-        <artifactId>lombok</artifactId>
-        <version>1.18.28</version>
-        <scope>provided</scope>
-    </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.28</version>
+            <scope>provided</scope>
+        </dependency>
     </dependencies>
-
-    <!-- почему-то не находится plugin -->
-    <!-- <build> -->
-    <!--      <plugins> -->
-    <!--          <plugin> -->
-    <!--              <groupId>org.apache.maven.plugins</groupId> -->
-    <!--              <artifactId>maven-checkstyle-plugin</artifactId> -->
-    <!--              <version>3.3.0</version> -->
-    <!--              <executions> -->
-    <!--                  <execution> -->
-    <!--                      <id>validate</id> -->
-    <!--                      <phase>validate</phase> -->
-    <!--                      <configuration> -->
-    <!--                          <configLocation>checkstyle.xml</configLocation> -->
-    <!--                          <encoding>UTF-8</encoding> -->
-    <!--                          <consoleOutput>true</consoleOutput> -->
-    <!--                          <failsOnError>true</failsOnError> -->
-    <!--                          <includeTestSourceDirectory>true</includeTestSourceDirectory> -->
-    <!--                      </configuration> -->
-    <!--                      <goals> -->
-    <!--                          <goal>check</goal> -->
-    <!--                      </goals> -->
-    <!--                  </execution> -->
-    <!--              </executions> -->
-    <!--          </plugin> -->
-    <!--      </plugins> -->
-    <!-- </build> -->
 
 </project>

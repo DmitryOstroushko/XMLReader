@@ -1,5 +1,6 @@
-package main.java.com.lianne.xml;
+package com.lianne.xml;
 
+import Lombok;
 
 public class XMLObject {
 
