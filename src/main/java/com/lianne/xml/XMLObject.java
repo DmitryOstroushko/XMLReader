@@ -1,5 +1,6 @@
 package com.lianne.xml;
 
+
 public class XMLObject {
 
     private String id;
@@ -13,7 +14,7 @@ public class XMLObject {
     }
 
     public void clear() {
-        id = "";
+       setId("");
     }
 
     public void setId(String id) {

@@ -8,8 +8,9 @@ import java.util.Properties;
 public class XMLAuthorizationAuditProperties {
 
     private static String GOAL_ELEMENT;
+    private static XMLAuthorizationAuditProperties instance;
 
-    public XMLAuthorizationAuditProperties() throws IOException
+    private XMLAuthorizationAuditProperties() throws IOException
     {
         Properties props = new Properties();
         props.load(Files.newInputStream(new File("config/config.ini").toPath()));
@@ -17,7 +18,14 @@ public class XMLAuthorizationAuditProperties {
         GOAL_ELEMENT = props.getProperty("GOAL_ELEMENT");
     }
 
-    public static String getGoalElement() {
+    public String getGoalElement() {
         return GOAL_ELEMENT;
+    }
+
+    public static XMLAuthorizationAuditProperties getInstance() throws IOException {
+        if (instance == null) {
+            instance = new XMLAuthorizationAuditProperties();
+        }
+        return instance;
     }
 }

@@ -54,7 +54,7 @@ public class AuditAuthorization extends XMLObject {
     public String getDuration() {
         SimpleDateFormat formatter = new SimpleDateFormat("yyyy.MM.dd HH:mm:ss.SSS");
         try {
-            return Long.toString (formatter.parse(getEndTime()).getTime() -
+            return (formatter.parse(getEndTime()).getTime() -
                     formatter.parse(getStartTime()).getTime()) + "ms";
         } catch (ParseException ex) {
             return "";

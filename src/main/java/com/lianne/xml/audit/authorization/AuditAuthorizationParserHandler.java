@@ -23,7 +23,7 @@ public class AuditAuthorizationParserHandler extends DefaultHandler {
         audit = new AuditAuthorization();
         thisElement = "";
         countHeadElement = 0;
-        XMLAuthorizationAuditProperties properties = new XMLAuthorizationAuditProperties();
+        properties = XMLAuthorizationAuditProperties.getInstance();
     }
 
     public ArrayList<AuditAuthorization> getResult() {
@@ -71,12 +71,16 @@ public class AuditAuthorizationParserHandler extends DefaultHandler {
     public void endElement(String namespaceURI, String localName, String qName) throws SAXException {
         printLog("Before end element " + qName);
         System.out.println("Element: " + qName);
-        if (qName.equals(XMLAuthorizationAuditProperties.getGoalElement())) {
-                countHeadElement--;
-            if (countHeadElement == 0) {
-                auditList.add(new AuditAuthorization(audit));
-                audit.clear();
+        try {
+            if (qName.equals(XMLAuthorizationAuditProperties.getInstance().getGoalElement())) {
+                    countHeadElement--;
+                if (countHeadElement == 0) {
+                    auditList.add(new AuditAuthorization(audit));
+                    audit.clear();
+                }
             }
+        } catch (IOException e) {
+            throw new RuntimeException(e);
         }
         thisElement = "";
         printLog("After end element " + qName);
@@ -92,7 +96,7 @@ public class AuditAuthorizationParserHandler extends DefaultHandler {
     @Override
     public void endDocument() {
         System.out.println("Stop parse XML...");
-        System.out.println(auditList.size());
-        auditList.forEach(System.out::println);
+            System.out.println(auditList.size());
+            auditList.forEach(System.out::println);
     }
 }
