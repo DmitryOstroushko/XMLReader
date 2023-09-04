@@ -1,11 +1,16 @@
 package com.lianne.xml.audit.authorization;
 
-import com.lianne.xml.XMLObject;
+import lombok.*;
+
+import com.lianne.xml.XMLAuditBaseObject;
 
 import java.text.SimpleDateFormat;
 import java.text.ParseException;
 
-public class AuditAuthorization extends XMLObject {
+@EqualsAndHashCode(callSuper = true)
+@Data
+@ToString(callSuper=true, includeFieldNames=true)
+public class AuditAuthorization extends XMLAuditBaseObject {
     private String startTime;
     private String endTime;
     private String transactionStatusCode;
@@ -27,6 +32,8 @@ public class AuditAuthorization extends XMLObject {
         endTime = "";
         transactionStatusCode = null;
     }
+
+    /* due to lombok
     public String getTransactionStatusCode() {
         return transactionStatusCode;
     }
@@ -34,7 +41,9 @@ public class AuditAuthorization extends XMLObject {
     public void setTransactionStatusCode(String transactionStatusCode) {
         this.transactionStatusCode = transactionStatusCode;
     }
+    */
 
+    /* due to lombok
     public String getEndTime() {
         return endTime;
     }
@@ -42,7 +51,9 @@ public class AuditAuthorization extends XMLObject {
     public void setEndTime(String endTime) {
         this.endTime = endTime;
     }
+     */
 
+    /* due to lombok
     public String getStartTime() {
         return startTime;
     }
@@ -50,17 +61,20 @@ public class AuditAuthorization extends XMLObject {
     public void setStartTime(String startTime) {
         this.startTime = startTime;
     }
+     */
 
+    @ToString.Include
     public String getDuration() {
         SimpleDateFormat formatter = new SimpleDateFormat("yyyy.MM.dd HH:mm:ss.SSS");
         try {
             return (formatter.parse(getEndTime()).getTime() -
                     formatter.parse(getStartTime()).getTime()) + "ms";
         } catch (ParseException ex) {
-            return "";
+            return "It is impossible to calculate duration due to error";
         }
     }
 
+    /* due to lombok
     @Override
     public String toString() {
         StringBuilder builder = new StringBuilder();
@@ -78,4 +92,5 @@ public class AuditAuthorization extends XMLObject {
         return builder.toString();
 
     }
+     */
 }

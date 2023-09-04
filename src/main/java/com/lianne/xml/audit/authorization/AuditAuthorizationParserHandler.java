@@ -37,7 +37,7 @@ public class AuditAuthorizationParserHandler extends DefaultHandler {
 
     private void printLog(String title) {
         System.out.println(title + ", id: " + audit.getId() + ", start time: " + audit.getStartTime() +
-                ", end time: " + audit.getEndTime() + ", countHeadElement: " + countHeadElement);
+               ", end time: " + audit.getEndTime() + ", countHeadElement: " + countHeadElement);
     }
     @Override
     public void startElement(String namespaceURI, String localName, String qName, Attributes atts) throws SAXException {
@@ -96,7 +96,5 @@ public class AuditAuthorizationParserHandler extends DefaultHandler {
     @Override
     public void endDocument() {
         System.out.println("Stop parse XML...");
-            System.out.println(auditList.size());
-            auditList.forEach(System.out::println);
     }
 }

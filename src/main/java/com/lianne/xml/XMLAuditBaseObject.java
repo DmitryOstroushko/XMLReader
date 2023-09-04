@@ -1,16 +1,17 @@
 package com.lianne.xml;
 
-import Lombok;
+import lombok.*;
 
-public class XMLObject {
-
+@Data
+@ToString
+public class XMLAuditBaseObject {
     private String id;
 
-    public XMLObject() {
+    public XMLAuditBaseObject() {
         id = "";
     }
 
-    public XMLObject(String id) {
+    public XMLAuditBaseObject(String id) {
         setId(id);
     }
 
@@ -18,6 +19,7 @@ public class XMLObject {
        setId("");
     }
 
+    /*
     public void setId(String id) {
         this.id = id;
     }
@@ -25,5 +27,6 @@ public class XMLObject {
     public String getId() {
         return id;
     }
+     */
 
 }
